@@ -66,7 +66,7 @@ The support user can get a pay band because its role has EXECUTE permission on t
 
 - **Part 2:**
 The unsafe procedure joins the supplied name directly into the SQL command. The injected quote closes the name value, OR 1=1 makes the condition true for every row, and -- comments out the remaining quote. This changes the query’s meaning instead of searching for a literal name. As a result, the injected search returned all three employees instead of only Amara Okafor.
-![Unsafe procedure return every row](evidence/03-part2.png)
+![Unsafe dynamic SQL](evidence/03-part2.png)
 
 ### Parameterized search blocks injection
 
@@ -77,6 +77,7 @@ The same injection input returned zero rows after the fix.
 
 ![Safe employee search returning zero rows](evidence/02b-part4.png)
 
+### Least privilege
 - **Part 5:**
 The role model limited users to the permissions needed for their jobs, reducing the damage an attacker could cause through SQL injection. For example, the support role could read employee information but was denied direct access to the sensitive salary table. Injection would still be restricted by the permissions of the execution context; because these injection tests ran as the administrator, they had broader access than a support user would.
 
