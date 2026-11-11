@@ -46,3 +46,7 @@ See the [lab guide](labs/05-stored-procedures-sql-injection/README.md) for prere
 ## Attribution
 
 Based on CPAN 363 Lab 5, Stored Procedures and SQL Injection. The course supplied the database scaffolding and procedure examples; this repository documents the implementation, execution, verification, and analysis performed during the lab, with AI assistance in preparation and documentation. Instructor PDFs, the original setup script, and the signed submission are excluded from this portfolio package.
+
+## Detailed case study
+
+[Read the Lab 5 report: testing, results, and remediation](docs/lab5-security-case-study.pdf)
