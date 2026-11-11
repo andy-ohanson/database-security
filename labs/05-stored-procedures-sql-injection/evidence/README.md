@@ -29,6 +29,7 @@ The unsafe procedure joins the supplied name directly into the SQL command. The 
 
 - Part 4.4: explaining why the parameter cannot be injected
 The fixed procedures use parameters directly in static SQL, so the supplied values cannot change the query’s structure. The name procedure treats the injection text as a literal name and returns no matches, while the integer parameter rejects 1 OR 1=1 with a conversion error. A procedure parameter alone is not enough to prevent injection if its value is later concatenated into executable SQL.
+![Safe employee search returning zero rows](images/02b-part4.png)
 
 - Part 5.2: how did the role model (RBAC) you built in Labs 3 and 4 limit what an attacker could have done here? 
 The role model limited users to the permissions needed for their jobs, reducing the damage an attacker could cause through SQL injection. For example, the support role could read employee information but was denied direct access to the sensitive salary table. Injection would still be restricted by the permissions of the execution context; because these injection tests ran as the administrator, they had broader access than a support user would.
