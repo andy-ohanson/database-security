@@ -1,13 +1,15 @@
 # Azure SQL Database Security
 
-Course-based Azure SQL security labs covering role permissions and audit evidence, alongside a lab demonstrating least privilege, controlled SQL injection testing, and verified remediation with static SQL and typed parameters.
+Hands-on Azure SQL security labs covering identity management, least privilege, access auditing, and SQL injection remediation.
 
 ## Lab index
 
 | Lab | Security focus | Materials |
 | --- | --- | --- |
+| 02: Logins, Users and Microsoft Entra | Login mapping, contained users, external identity, access suspension | [Case study, SQL, and evidence](labs/02-logins-users-entra/README.md) |
 | 03: Permissions and Roles | Least privilege, effective permissions, DENY versus inherited GRANT, access auditing | [Case study and SQL](labs/03-permissions-and-roles/README.md) |
 | 05: Stored Procedures and SQL Injection | Ownership chaining, injection testing, typed parameters, remediation | [Case study and SQL](labs/05-stored-procedures-sql-injection/README.md) |
+
 
 Each lab is a separate historical database snapshot. Do not replay Lab 3 over the completed Lab 5 environment.
 
