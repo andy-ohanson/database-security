@@ -1,8 +1,17 @@
 # Azure SQL Database Security
 
-A course-based security lab demonstrating least privilege, controlled SQL injection testing, and verified remediation with static SQL and typed parameters.
+Course-based Azure SQL security labs covering role permissions and audit evidence, alongside a lab demonstrating least privilege, controlled SQL injection testing, and verified remediation with static SQL and typed parameters.
 
-## Security problem
+## Lab index
+
+| Lab | Security focus | Materials |
+| --- | --- | --- |
+| 03: Permissions and Roles | Least privilege, effective permissions, DENY versus inherited GRANT, access auditing | [Case study and SQL](labs/03-permissions-and-roles/README.md) |
+| 05: Stored Procedures and SQL Injection | Ownership chaining, injection testing, typed parameters, remediation | [Case study and SQL](labs/05-stored-procedures-sql-injection/README.md) |
+
+Each lab is a separate historical database snapshot. Do not replay Lab 3 over the completed Lab 5 environment.
+
+## Lab 5: Security problem
 
 Support staff need useful employee information without access to exact salaries. Separately, employee lookup procedures must prevent untrusted input from changing the SQL command.
 
@@ -48,5 +57,6 @@ See the [lab guide](labs/05-stored-procedures-sql-injection/README.md) for prere
 Based on CPAN 363 Lab 5, Stored Procedures and SQL Injection. The course supplied the database scaffolding and procedure examples; this repository documents the implementation, execution, verification, and analysis performed during the lab, with AI assistance in preparation and documentation. Instructor PDFs, the original setup script, and the signed submission are excluded from this portfolio package.
 
 ## Detailed case study
+[Read the Lab 3 report: testing, results, and remediation](docs/lab3-security-case-study.pdf)
 
 [Read the Lab 5 report: testing, results, and remediation](docs/lab5-security-case-study.pdf)
